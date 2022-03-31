@@ -29,14 +29,7 @@ body {
 }
 
 h1 {
-   
-    /* background-image: url(https://media.giphy.com/media/FMsbSSjEe0N6zH7K7x/giphy-downsized-large.gif); */
-    /* background-image: url(https://media.giphy.com/media/5kFbMBOEdWjg1nItoG/giphy.gif); */
-    /* background-image: url(https://media.giphy.com/media/T4TNArFu7OHHa/giphy.gif); */
-    /* background-image: url(https://media.giphy.com/media/CKlafeh1NAxz35KTq4/giphy-downsized-large.gif); */
-    /* background-image: url(https://media.giphy.com/media/KZFrf9JusXzmpnPsT6/giphy-downsized-large.gif); */
     background-image: url(https://media.giphy.com/media/3bc8pP1rVdfgN1uoMV/giphy-downsized-large.gif);
-    /* background-image: url(https://media.giphy.com/media/9JxkPTP3alOykb8PmQ/giphy.gif); */
     background-size: cover;
     color: transparent;
     letter-spacing: 3px;

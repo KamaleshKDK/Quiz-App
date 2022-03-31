@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "../app.css";
 import Quiz from "./Quiz";
 import Timer from "./Timer";
-import win from '../assets/win.gif'
+
 
 
 
@@ -372,7 +372,7 @@ function Main() {
       <>
         <div className="main">
           {
-            stop ? <h2 className="endText">You earned : {earned 
+            stop ? <h2 className="endText">You earned : {earned
               // src={win}
               // alt="loading..."
               // style={{
@@ -384,7 +384,7 @@ function Main() {
               //   left: "50%",
               //   transform: "translate(-50%, -50%)"
               // }}
-           
+
             }
             </h2> :
               (
