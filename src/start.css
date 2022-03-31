@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.app1 {
+    height: 100vh;
+    display: flex;
+    color: white;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #300202),
+        url("../src/assets/stage.jpg") center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+body {
+    background-color: #111;
+}
+
+.title {
+    font-family: "Montserrat";
+    text-align: center;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    letter-spacing: 1px;
+
+}
+
+h1 {
+   
+    /* background-image: url(https://media.giphy.com/media/FMsbSSjEe0N6zH7K7x/giphy-downsized-large.gif); */
+    /* background-image: url(https://media.giphy.com/media/5kFbMBOEdWjg1nItoG/giphy.gif); */
+    /* background-image: url(https://media.giphy.com/media/T4TNArFu7OHHa/giphy.gif); */
+    /* background-image: url(https://media.giphy.com/media/CKlafeh1NAxz35KTq4/giphy-downsized-large.gif); */
+    /* background-image: url(https://media.giphy.com/media/KZFrf9JusXzmpnPsT6/giphy-downsized-large.gif); */
+    background-image: url(https://media.giphy.com/media/3bc8pP1rVdfgN1uoMV/giphy-downsized-large.gif);
+    /* background-image: url(https://media.giphy.com/media/9JxkPTP3alOykb8PmQ/giphy.gif); */
+    background-size: cover;
+    color: transparent;
+    letter-spacing: 3px;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-size: 110px;
+    line-height: .75;
+    margin-bottom: 100px;
+    /* margin: 20px 0; */
+}
+
+
+/* Button Styles */
+
+
+.glow-on-hover {
+    width: 120px;
+    height: 35px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    margin-top: 19px;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 40px;
+    position: absolute;
+    z-index: 0;
+    border-radius: 10px;
+    margin-left: 87px;
+    /* margin-bottom: 20px; */
+}
+
+button {
+    margin-bottom: 30px;
+    top: 100%;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #002bff);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #050544;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+input {
+    font-size: 18px;
+    padding: 0px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    color: white;
+    background: none;
+    margin-bottom: 190px;
+    margin-top: 20px;
+
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* LABEL ======================================= */
+label {
+    color: rgb(182, 179, 179);
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    margin-right: 8px;
+    /* left: 0px; */
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus~label, input:valid~label {
+    top: -20px;
+    font-size: 14px;
+    color: #5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+    margin-bottom: 190px;
+
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+/* active state */
+input:focus~.bar:before, input:focus~.bar:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+input:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+.start {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.startInput {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.startInput:focus {
+    outline: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    h1 {
+        font-size: 50px;
+        margin-top: 70px;
+        background-image: url(https://media.giphy.com/media/3o7aCQTyoPLEVwVtZK/giphy.gif);
+
+    }
+
+    input {
+        margin-bottom: 250px;
+
+    }
+
+    button {
+        margin-bottom: 30px;
+        top: 100%;
+    }
+
+    .glow-on-hover {
+        margin-bottom: 40px;
+        position: absolute;
+    }
+
+    .bar:before, .bar:after {
+        margin-bottom: 250px;
+    }
+    .glow-on-hover:after {
+        background-image: url(https://media.giphy.com/media/LmNy9OYM7hni2iHKeO/giphy-downsized-large.gif);
+     
+        background-color: #5f0707;
+    }
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff0000);
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    .glow-on-hover:active {
+        color: #000
+    }
+    
+    .glow-on-hover:active:after {
+        background: transparent;
+    }
+    
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+}
